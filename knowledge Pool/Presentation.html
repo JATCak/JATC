@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Particles.js - Full Page Background with Slides</title>
+  <meta name="description" content="Particles.js animation as the full page background with slides displayed.">
+  <meta name="author" content="Vincent Garreau">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Include Font Awesome for icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    /* Full-page background */
+    #particles-js {
+      position: fixed; /* Fix particles to background */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Push particles behind content */
+      pointer-events: none; /* Allow interaction with content */
+    }
+
+    /* General body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff; /* Text color */
+      background-color: #000000; /* Page background color */
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+    /* Header styling */
+    #header {
+      position: relative;
+      width: 100%;
+      height: 200px; /* Adjust header height */
+      text-align: center;
+      z-index: 1; /* Ensure content is above particles */
+      padding-top: 50px; /* Adjust vertical alignment */
+    }
+
+    /* Slides container styling */
+    #slides-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px; /* Adjust to control spacing from header */
+    }
+
+    .slide {
+      width: 80%; /* Adjust width as needed */
+      max-width: 800px;
+      margin-bottom: 20px; /* Space between slides */
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      color: #b92222;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #000000;
+    }
+
+    a {
+      color: #00bfff; /* Link color */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Particles.js container -->
+<div id="particles-js"></div>
+
+<!-- Header with content -->
+<header id="header">
+  <p style="font-size: 2em;">Presentations/ Talks Delivered</p>
+</header>
+
+
+<table style="width: 50%; margin: auto; margin-top: 20px; border-collapse: collapse; font-size: 0.9em; color: #fff;">
+    <thead>
+      <tr style="background-color: #444;">
+        <th style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Speaker's Name</th>
+        <th style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Presentations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Vijesh</td>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">
+          <a href="https://docs.google.com/presentation/d/14E-XBX02EVstlgfNBApMwI3UdrcEVZa9FTzT7-uvm0Q/edit?usp=sharing" style="color: #00bfff; text-decoration: none;">View PPT</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Orangutan</td>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">
+          <a href="https://docs.google.com/presentation/d/14E-XBX02EVstlgfNBApMwI3UdrcEVZa9FTzT7-uvm0Q/edit?usp=sharing" style="color: #00bfff; text-decoration: none;">View PPT</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Bhalu</td>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">
+          <a href="https://docs.google.com/presentation/d/14E-XBX02EVstlgfNBApMwI3UdrcEVZa9FTzT7-uvm0Q/edit?usp=sharing" style="color: #00bfff; text-decoration: none;">View PPT</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">Chippkali</td>
+        <td style="padding: 5px; border: 1px solid #ddd; text-align: center; color: #fff;">
+          <a href="https://docs.google.com/presentation/d/14E-XBX02EVstlgfNBApMwI3UdrcEVZa9FTzT7-uvm0Q/edit?usp=sharing" style="color: #00bfff; text-decoration: none;">View PPT</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  /* Initialize particles.js */
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 260, /* Number of particles */
+        "density": {
+          "enable": true,
+          "value_area": 1000 /* Adjust area density */
+        }
+      },
+      "color": {
+        "value": "#ffffff" /* Particle color */
+      },
+      "shape": {
+        "type": "circle", /* Shape type: circle, edge, etc. */
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 2.5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
